@@ -1,0 +1,29 @@
+<ul>
+    <li>
+     <p class="date">Retailer</p> 
+      <a href="/deploy"><button id="deployBtn">Deploy</button></a>
+      <a href="/draw"><button id="drawBtn">Draw</button></a>
+    </li>
+    {{#if txn}}
+    <li>
+      <p class="date">Contract Creation Txn</p>
+      <a href="https://explorer.bumotest.io/tx/{{txn}}" target="_blank"><div id="qrcode"></div></a>
+      <p style="color:black">Scan the QR Code for transaction detail on bumo blockchain</p> 
+    </li>
+    {{/if}}
+    {{#if hasTxnInfo}}
+    <li>
+      <p class="date">Transactions</p> 
+      {{#each txnInfo}}
+        <p style="color:black">{{buyer}}</p>
+        {{#each numbers}}
+          <span>{{this}}</span>
+        {{/each}}
+        <span class="multiplier">{{megaNum}}</span>
+      {{/each}}
+    </li>
+    {{/if}}
+  </ul>
+    <script>
+      $('#qrcode').qrcode("https://explorer.bumotest.io/tx/{{txn}}");
+  </script>

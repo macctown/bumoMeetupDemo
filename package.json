@@ -1,0 +1,26 @@
+{
+  "name": "BUMOMEGAMILLION",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^2.0.0-rc.4",
+    "bignumber.js": "^7.2.1",
+    "bumo-sdk": "^2.1.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.4",
+    "path": "^0.12.7",
+    "promise": "^7.1.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.2",
+    "validator": "^5.2.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0"
+  }
+}

@@ -1,0 +1,21 @@
+<ul>
+    <li>
+      <p class="date">Winning Number - Prize: {{prize}} BU</p> 
+      <span>{{num1}}</span>
+      <span>{{num2}}</span> 
+      <span>{{num3}}</span> 
+      <span>{{num4}}</span> 
+      <span>{{num5}}</span> 
+      <span class="multiplier">{{megaNum}}</span>
+    </li>
+    <li>
+        <p class="date">Winners</p> 
+        {{#each winners}}
+            <p style="color:black;font-size:20px">{{ this }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +{{../prizePerPerson}} BU</p>
+        {{/each}}
+    </li>
+    <li>
+      <a href="/payout"><button id="payoutBtn">Payout</button></a>
+    </li>
+  </ul>
+    

@@ -1,0 +1,12 @@
+<ul>
+    <li>
+     <p class="date">Payout Transaction Complete</p> 
+     <a href="https://explorer.bumotest.io/tx/{{txnHash}}" target="_blank"><div id="qrcode"></div></a>
+     <p style="color:black">Scan the QR Code for transaction detail on bumo blockchain</p>
+    </li>
+  </ul>
+  <script>
+      $('#qrcode').qrcode("https://explorer.bumotest.io/tx/{{txnHash}}");
+  </script>
+    
+   

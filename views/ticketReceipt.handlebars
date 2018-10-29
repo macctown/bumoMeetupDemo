@@ -1,0 +1,21 @@
+<ul>
+    <li>
+     <p class="date">Receipt </p> 
+      <p class="txn" style="font-size: 12px;color:black;">{{txnHash}}</p>
+      <span>{{num1}}</span>
+      <span>{{num2}}</span> 
+      <span>{{num3}}</span> 
+      <span>{{num4}}</span> 
+      <span>{{num5}}</span> 
+      <span class="multiplier">{{megaNum}}</span>
+    </li>
+    <li>
+     <a href="https://explorer.bumotest.io/tx/{{txnHash}}" target="_blank"><div id="qrcode"></div></a>
+     <p style="color:black">Scan the QR Code for transaction detail on bumo blockchain</p>
+    </li>
+  </ul>
+  <script>
+      $('#qrcode').qrcode("https://explorer.bumotest.io/tx/{{txnHash}}");
+  </script>
+    
+   
