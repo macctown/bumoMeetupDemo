@@ -12,6 +12,8 @@ module.exports = function(app, logger) {
     app.get('/', homeController.home);
     app.post('/buyTicket', homeController.buyTicket);
     app.get('/deploy', homeController.deploy);
+    app.post('/setAddr', homeController.setAddr);
+    app.post('/setUser', homeController.setUser);
     app.get('/draw', homeController.draw);
     app.get('/payout', homeController.payout);
     app.get('/retailer', homeController.retailer);

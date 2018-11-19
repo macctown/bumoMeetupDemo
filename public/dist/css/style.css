@@ -149,6 +149,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 .danger {color: red;}
 .default {color: black;}
 
+#setupBtn{
+  padding: 10px 16px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  background-color: rgb(228, 11, 47);
+  cursor:pointer;
+}
+
+
 #drawBtn{
   padding: 10px 16px;
   margin-top: 20px;

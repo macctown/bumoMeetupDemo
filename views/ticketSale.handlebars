@@ -1,4 +1,5 @@
  <ul>
+   {{#if hasUser}}
     <li>
      <p class="date">Next Draw: 10/29/2018 11:00 EDT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prize: {{prize}} BU</p> 
       
@@ -21,7 +22,18 @@
      <button id="buyBtn">Buy</button>
      </form>
     </li>
+    {{else}}
+      <li>
+      <p class="date">Setup User Info</p>
+      <form action="/setUser" method="POST">
+        <input name="publicKey" placeholder="public key" type="text" style="width: 450px;font-size: 20px;height: 40px;">
+        <input name="privateKey" placeholder="private key" type="password" style="width: 450px;font-size: 20px;height: 40px;">
+        <br><button id="setupBtn">Confirm</button>
+      </form>
+    </li>
+    {{/if}}
     <li>
-        <p style="color:black">Current User: buQoi931TCqk4zE8oHXbyQX6xVLjcoLbRk7d</p>
+        <p style="color:black">Current User: {{currentUser}}</p>
+        <p style="color:black">Current Contract: {{currentContractAddr}}</p>
     </li>
   </ul>

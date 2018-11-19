@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var logger = require('../../utils/log/logger');
 var exphbs = require('express-handlebars');
-
+var dotenv = require('dotenv').config();
 /**
  * Create Express server.
  */

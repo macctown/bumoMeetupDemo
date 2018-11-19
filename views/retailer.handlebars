@@ -1,6 +1,7 @@
 <ul>
     <li>
      <p class="date">Retailer</p> 
+     <p style="color:black">Current Contract Address: {{currentContractAddr}}</p>
       <a href="/deploy"><button id="deployBtn">Deploy</button></a>
       <a href="/draw"><button id="drawBtn">Draw</button></a>
     </li>
@@ -23,6 +24,13 @@
       {{/each}}
     </li>
     {{/if}}
+    <li>
+      <p class="date">Setup Contract Address</p>
+      <form action="/setAddr" method="POST">
+        <input name="contractAddr" type="text" style="width: 450px;font-size: 20px;height: 40px;">
+        <br><button id="setupBtn">Setup</button>
+      </form>
+    </li>
   </ul>
     <script>
       $('#qrcode').qrcode("https://explorer.bumotest.io/tx/{{txn}}");
