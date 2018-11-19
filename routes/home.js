@@ -59,7 +59,7 @@ var homeController = {
 
     retailer : function(req, res) {
         var renderRes = res;
-        if (contractAddr == undefined) {
+        if (process.env.contractAddr == undefined) {
             renderRes.render('retailer', {
                 title: 'BUMO Mega Million - Retailer',
                 contractTxn: false,
